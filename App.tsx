@@ -11,7 +11,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { useAppSelector } from './redux/hooks';
 import { RootStackParamList } from './global';
 import { g } from './constants/global';
-import BottomTabs from './components/BottomTabs';
 import DrawerNavigation from './components/DrawerNavigation';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
@@ -29,7 +28,8 @@ function App() {
       <View
         style={[
           styles.statusBarBackground,
-          { backgroundColor: isDarkMode ? '#91C8E4' : '#91C8E4' },
+          // { backgroundColor: isDarkMode ? '#91C8E4' : '#91C8E4' },
+          {backgroundColor: '#000000'},
         ]}
       />
 
@@ -39,7 +39,7 @@ function App() {
             screenOptions={{
               headerShown: false,
               headerStyle: { backgroundColor: '#A27B5C' },
-              cardStyle: { backgroundColor: g.background[isDarkMode ? 'dark' : 'light'] },
+              cardStyle: { backgroundColor: '#000000' },
             }}
             initialRouteName="Tab"
           >

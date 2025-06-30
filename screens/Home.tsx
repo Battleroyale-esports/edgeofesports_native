@@ -1,35 +1,19 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { useAppDispatch } from '../redux/hooks';
-import { toggleTheme } from '../redux/slice/themeSlice';
-import TopBar from '../components/TopBar';
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs'
+import { BottomTabParamList } from '../global'
 
-export default function Home() {
-
-
-  const dispatch = useAppDispatch();
-  const handleToggleTheme = () => {
-    dispatch(toggleTheme());
-  };
+export default function Home({navigation}: {navigation: BottomTabNavigationProp<BottomTabParamList, 'Home'>}) {
 
   return (
-    <ScrollView>
-      <TopBar />
-      <Text>Home</Text>
-      {/* <Pressable
-        onPress={handleToggleTheme}
-        style={{
-          backgroundColor: '#A27B5C',
-          padding: 10,
-          borderRadius: 5,
-          marginTop: 20,
-          height: 50,
-        }}
-      /> */}
+    <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} contentContainerStyle={{ flexGrow: 1, paddingBottom: 70 }}>
+      <View style={{ paddingHorizontal: 10}}>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20, color: '#ffffff' }}>Home Screen</Text>
+      </View>
     </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {backgroundColor: '#222831'},
+  // container: {backgroundColor: g.background.light},
 })

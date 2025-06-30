@@ -8,6 +8,9 @@ export type BottomTabParamList = {
   Search: undefined; // no params
   Notifications: undefined; // no params
   Profile: { userId: string }; // expects a param
+  Chats: undefined; // no params
+  Aviator: undefined; // no params
+  AviatorAnimation: undefined; // no params
 };
 export type DrawerParamList = {
   DHome: undefined; // no params
